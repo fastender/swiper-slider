@@ -19,7 +19,7 @@ A fully customizable swiper slider for Home Assistant dashboards.
 3. Select **Custom Repositories**.
 4. Add this repository URL:
    ```
-   https://github.com/your-username/hacs-custom-slider
+   https://github.com/fastender/swiper-slider
    ```
 5. Set the category to **Integration** and confirm.
 6. Install the `Custom Slider` integration.
