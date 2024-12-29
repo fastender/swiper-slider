@@ -82,12 +82,14 @@ cards:
 ### Project Structure
 ```
 swiper-slider/
-├── dist/
+├── dist/                   # Frontend-Dateien kommen in diesen Ordner
 │   ├── custom-slider.js
 │   ├── swiper-bundle.min.js
 │   └── swiper-bundle.min.css
-├── LICENSE
-├── README.md
+├── hacs.json               # HACS-Konfigurationsdatei
+├── README.md               # Dokumentation
+├── LICENSE                 # Lizenz (z. B. MIT)
+
 ```
 
 ---
