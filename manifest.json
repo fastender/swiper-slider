@@ -1,0 +1,9 @@
+{
+  "domain": "swiper_slider",
+  "name": "Swiper Slider",
+  "version": "1.0.0",
+  "documentation": "https://github.com/fastender/swiper-slider",
+  "dependencies": [],
+  "codeowners": ["@fastender"],
+  "requirements": []
+}
