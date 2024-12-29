@@ -81,7 +81,7 @@ cards:
 
 ### Project Structure
 ```
-hacs-custom-slider/
+custom-slider/
 ├── custom_components/
 │   └── custom_slider/
 │       ├── __init__.py
