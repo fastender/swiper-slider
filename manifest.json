@@ -1,11 +1,8 @@
 {
-  "domain": "swiper_slider",
   "name": "Swiper Slider",
-  "version": "1.0.0",
-  "documentation": "https://github.com/fastender/swiper-slider",
-  "dependencies": [],
-  "codeowners": ["@fastender"],
-  "requirements": [],
-  "iot_class": "local_push",
-  "integration_type": "frontend"
+  "content_in_root": true,
+  "ilename": "custom-slider.js",  
+  "render_readme": true,
+  "country": ["DE"],
+  "homeassistant": "0.109"  
 }
