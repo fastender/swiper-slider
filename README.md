@@ -1,7 +1,7 @@
 
 # Swiper Slider for Home Assistant
 
-![Preview of Swiper Slider](assets/slider-preview.jpeg)
+![Preview of Swiper Slider](assets/preview.jpeg)
 
 A fully customizable swiper slider for Home Assistant dashboards.
 
