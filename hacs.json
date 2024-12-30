@@ -6,5 +6,5 @@
   "country": ["EN"],
   "homeassistant": "2023.1.0",
   "persistent_directory": false,
-  "integration_type": "frontend"
+  "integration_type": "plugin"
 }
