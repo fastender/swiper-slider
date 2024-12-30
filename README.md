@@ -1,12 +1,12 @@
 
 # Swiper Slider for Home Assistant
 
-![Preview of Swiper Slider](assets/preview.jpg)
-
 A fully customizable swiper slider for Home Assistant dashboards.
 
+![Preview of Swiper Slider](assets/slider-preview.png)
+
 ## Features
-- **Infinite loop**: Seamlessly loops through all cards.
+- **Infinite loop**: The slider seamlessly loops through all cards.
 - **Autoplay**: Automatically rotates cards at a configurable interval.
 - **Coverflow effect**: Adds a depth effect to the displayed cards.
 - **Configurable**: Easily adjust the number of visible cards, spacing, and animation effects.
@@ -84,14 +84,14 @@ cards:
 ### Project Structure
 ```
 swiper-slider/
-├── dist/                   # Frontend-Dateien kommen in diesen Ordner
+├── dist/
 │   ├── custom-slider.js
 │   ├── swiper-bundle.min.js
 │   └── swiper-bundle.min.css
-├── hacs.json               # HACS-Konfigurationsdatei
-├── README.md               # Dokumentation
-├── LICENSE                 # Lizenz (z. B. MIT)
-
+├── LICENSE
+├── README.md
+├── assets/
+│   └── slider-preview.png
 ```
 
 ---
