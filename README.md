@@ -1,55 +1,69 @@
 
 # Swiper Slider Card for Home Assistant
 
-A fully customizable swiper slider card for Home Assistant dashboards.
+A fully customizable Swiper Slider Card for Home Assistant dashboards.
 
-![Preview of Swiper Slider](assets/slider-preview.png)
+![Swiper Slider Preview](assets/slider-preview.png)
 
 ## Features
-- **Infinite loop**: The slider seamlessly loops through all cards.
+
+- **Infinite Loop**: The slider cycles through all cards seamlessly.
 - **Autoplay**: Automatically rotates cards at a configurable interval.
-- **Coverflow effect**: Adds a depth effect to the displayed cards.
-- **Configurable**: Easily adjust the number of visible cards, spacing, and animation effects.
+- **Coverflow Effect**: Adds a depth effect to displayed cards.
+- **Highly Customizable**: Adjust the number of visible cards, spacing, and animation effects.
 
 ---
 
 ## Installation
 
-### Option 1: Through HACS
-1. Open **HACS** in Home Assistant.
-2. Go to **Frontend** and click the three dots in the top-right corner.
-3. Select **Custom Repositories**.
-4. Add this repository URL:
-   ```
-   https://github.com/fastender/swiper-slider
-   ```
-5. Set the category to **Frontend** and confirm.
-6. Install the `Swiper Slider Card` integration.
+### Option 1: Install via HACS
+
+1. **Open HACS**: Navigate to **HACS** in your Home Assistant dashboard.
+2. **Add Custom Repository**:
+   - Click the three dots in the top-right corner and select **Custom Repositories**.
+   - Add the repository:
+     ```
+     https://github.com/fastender/swiper-slider
+     ```
+   - Set the category to **Frontend** and confirm.
+3. **Install the Integration**:
+   - Search for `Swiper Slider Card` in HACS and install it.
+4. **Restart Home Assistant**: Restart Home Assistant to apply changes.
+
+---
 
 ### Option 2: Manual Installation
-1. Download the repository as a ZIP file and extract it.
-2. Copy the folder `dist/` to your Home Assistant `config/www/` directory.
-3. Restart Home Assistant to load the integration.
+
+1. **Download Files**:
+   - Download the latest version of the repository as a ZIP file from GitHub.
+   - Extract the ZIP file on your computer.
+
+2. **Copy Files**:
+   - Copy the contents of the `dist/` folder to the following directory on your Home Assistant server:
+     ```
+     config/www/swiper-slider/
+     ```
+
+3. **Add Resources**:
+   - Add the following resources to your `configuration.yaml` or use the Resource Manager in Home Assistant:
+     ```yaml
+     resources:
+       - url: /local/swiper-slider/swiper-bundle.min.js
+         type: module
+       - url: /local/swiper-slider/swiper-bundle.min.css
+         type: css
+       - url: /local/swiper-slider/swiper-slider-card.js
+         type: module
+     ```
+
+4. **Restart Home Assistant**:
+   - Restart Home Assistant to apply the changes.
 
 ---
 
 ## Configuration
 
-### Add Required Resources
-After installing the integration, add the following resources to your **Dashboard Resources**:
-
-```yaml
-resources:
-  - url: /local/swiper-slider/swiper-bundle.min.js
-    type: module
-  - url: /local/swiper-slider/swiper-bundle.min.css
-    type: css
-  - url: /local/swiper-slider/swiper-slider-card.js
-    type: module
-```
-
-### Dashboard Example
-Add the slider to your dashboard using the following configuration:
+Add the Swiper Slider Card to your dashboard with the following example configuration:
 
 ```yaml
 type: custom:swiper-slider-card
@@ -58,30 +72,31 @@ spaceBetween: -50
 autoplayDelay: 4000
 cards:
   - content: "Focus on the big picture"
-  - content: "Stay Tuned"
-  - content: "Stay Focused"
-  - content: "Improve Your Workflow"
-  - content: "Keep Improving"
+  - content: "Stay tuned"
+  - content: "Stay focused"
+  - content: "Improve your workflow"
+  - content: "Keep improving"
 ```
 
 ---
 
-## Customization
+## Customization Options
 
 ### Parameters
 
-| Parameter        | Description                                       | Default Value |
-|------------------|---------------------------------------------------|---------------|
-| `slidesPerView`  | Number of cards visible at once                  | `3`           |
-| `spaceBetween`   | Spacing between cards (in pixels)                | `-50`         |
-| `autoplayDelay`  | Delay in milliseconds for automatic slide rotation | `4000`        |
-| `loop`           | Enables infinite loop                            | `true`        |
+| Parameter        | Description                                         | Default Value |
+|------------------|-----------------------------------------------------|---------------|
+| `slidesPerView`  | Number of cards visible at once                     | `3`           |
+| `spaceBetween`   | Space between cards (in pixels)                     | `-50`         |
+| `autoplayDelay`  | Delay in milliseconds for automatic rotation        | `4000`        |
+| `loop`           | Enables infinite looping                            | `true`        |
 
 ---
 
 ## Development
 
 ### Project Structure
+
 ```
 swiper-slider/
 ├── dist/
