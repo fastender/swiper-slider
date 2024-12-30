@@ -1,8 +1,0 @@
-{
-  "name": "Swiper Slider",
-  "content_in_root": true,
-  "ilename": "custom-slider.js",  
-  "render_readme": true,
-  "country": ["DE"],
-  "homeassistant": "0.109"  
-}
