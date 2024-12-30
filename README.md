@@ -1,7 +1,7 @@
 
-# Swiper Slider for Home Assistant
+# Swiper Slider Card for Home Assistant
 
-A fully customizable swiper slider for Home Assistant dashboards.
+A fully customizable swiper slider card for Home Assistant dashboards.
 
 ![Preview of Swiper Slider](assets/slider-preview.png)
 
@@ -24,7 +24,7 @@ A fully customizable swiper slider for Home Assistant dashboards.
    https://github.com/fastender/swiper-slider
    ```
 5. Set the category to **Frontend** and confirm.
-6. Install the `Swiper Slider` integration.
+6. Install the `Swiper Slider Card` integration.
 
 ### Option 2: Manual Installation
 1. Download the repository as a ZIP file and extract it.
@@ -38,27 +38,13 @@ A fully customizable swiper slider for Home Assistant dashboards.
 ### Add Required Resources
 After installing the integration, add the following resources to your **Dashboard Resources**:
 
-
-```yaml
-resources:
-  - url: /hacsfiles/swiper-slider/swiper-bundle.min.js
-    type: module
-  - url: /hacsfiles/swiper-slider/swiper-bundle.min.css
-    type: css
-  - url: /hacsfiles/swiper-slider/custom-slider.js
-    type: module
-```
-
-If you have installed the Swiper library manually, change the path from /hacsfiles/ to /local/swiper-slider/:
-
-
 ```yaml
 resources:
   - url: /local/swiper-slider/swiper-bundle.min.js
     type: module
   - url: /local/swiper-slider/swiper-bundle.min.css
     type: css
-  - url: /local/swiper-slider/custom-slider.js
+  - url: /local/swiper-slider/swiper-slider-card.js
     type: module
 ```
 
@@ -66,7 +52,7 @@ resources:
 Add the slider to your dashboard using the following configuration:
 
 ```yaml
-type: custom-slider
+type: custom:swiper-slider-card
 slidesPerView: 3
 spaceBetween: -50
 autoplayDelay: 4000
@@ -99,7 +85,7 @@ cards:
 ```
 swiper-slider/
 ├── dist/
-│   ├── custom-slider.js
+│   ├── swiper-slider-card.js
 │   ├── swiper-bundle.min.js
 │   └── swiper-bundle.min.css
 ├── LICENSE
