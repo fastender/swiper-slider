@@ -1,6 +1,6 @@
 {
-  "name": "Swiper Slider",
-    "render_readme": true,
-    "filename": "custom-slider.js",
-    "content_in_root": false
+    "name": "Swiper Slider Card",
+    "content_in_root": false,
+    "filename": "dist/swiper-slider-card.js",
+    "render_readme": true
 }
