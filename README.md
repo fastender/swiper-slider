@@ -38,6 +38,20 @@ A fully customizable swiper slider for Home Assistant dashboards.
 ### Add Required Resources
 After installing the integration, add the following resources to your **Dashboard Resources**:
 
+
+```yaml
+resources:
+  - url: /hacsfiles/swiper-slider/swiper-bundle.min.js
+    type: module
+  - url: /hacsfiles/swiper-slider/swiper-bundle.min.css
+    type: css
+  - url: /hacsfiles/swiper-slider/custom-slider.js
+    type: module
+```
+
+If you have installed the Swiper library manually, change the path from /hacsfiles/ to /local/swiper-slider/:
+
+
 ```yaml
 resources:
   - url: /local/swiper-slider/swiper-bundle.min.js
