@@ -1,3 +1,4 @@
+const Swiper = window.Swiper;
 
 class SwiperSlider extends HTMLElement {
     setConfig(config) {
