@@ -1,7 +1,12 @@
-const Swiper = window.Swiper;
+if (!window.Swiper) {
+    throw new Error("Swiper.js is not loaded. Ensure it's included as a resource.");
+}
 
 class SwiperSlider extends HTMLElement {
     setConfig(config) {
+        if (!config.cards || !Array.isArray(config.cards)) {
+            throw new Error("Invalid configuration: 'cards' must be an array.");
+        }
         this.config = config;
         this.render();
     }
@@ -12,7 +17,10 @@ class SwiperSlider extends HTMLElement {
     }
 
     render() {
-        if (this.slider) this.removeChild(this.slider);
+        if (this.slider) {
+            this.removeChild(this.slider);
+            this.slider = null;
+        }
 
         const container = document.createElement('div');
         container.className = 'swiper-container';
@@ -38,25 +46,4 @@ class SwiperSlider extends HTMLElement {
                 delay: this.config.autoplayDelay || 4000,
                 disableOnInteraction: false,
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 200,
-                modifier: 3,
-                slideShadows: true,
-            },
-        });
-
-        this.slider = container;
-    }
-
-    getCardSize() {
-        return 3;
-    }
-}
-
-customElements.define('swiper-slider-card', SwiperSlider);
+  
