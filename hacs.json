@@ -1,10 +1,6 @@
 {
   "name": "Swiper Slider",
-  "content_in_root": false,
-  "render_readme": true,
-  "domains": [],
-  "country": ["EN"],
-  "homeassistant": "2023.1.0",
-  "persistent_directory": false,
-  "integration_type": "plugin"
+    "render_readme": true,
+    "filename": "custom-slider.js",
+    "content_in_root": false
 }
